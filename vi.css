@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body{
+    display: flex;
+    align-items: start;
+    justify-content: flex-end;
+    direction: rtl;
+    overflow: hidden;
+    background: #071952;
+}
+
+.container{
+
+  width: 1500px;
+    height: 700px;
+    display: flex;   
+    background: rgb(238, 236, 236);
+    border-radius: 5px;
+
+}
+
+
+ .container .videos::-webkit-scrollbar {
+  width: 10px;
+  box-shadow: 2px 3px 3px #337CCF;
+ 
+}
+
+/* Track */
+.container .videos::-webkit-scrollbar-track {
+  background: #888;
+
+}
+
+/* Handle */
+.container .videos::-webkit-scrollbar-thumb {
+  background: #337CCF;
+  border-radius: 5px;
+
+}
+
+/* Handle on hover */
+.container .videos::-webkit-scrollbar-thumb:hover {
+  background:  #071952;
+}
+
+.container .videos{
+    width: 20%;
+    padding: 10px 0 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+        overflow: scroll;
+ position: sticky;
+  right: 60;
+}
+
+
+  .bar{
+  width: 300px;
+    height: 50px;
+    background: red;
+     border-radius: 30px;
+position: absolute ;
+ position: absolute;
+  top: 650px;
+  right: 30 ;
+   align-items: center;
+    justify-content: center;
+ display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+  
+
+.container .videos video{
+    width: 95%;
+    height: 100px;
+    margin: 10px;
+     object-fit: contain;
+    background: #555;
+  border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+ z-index: -1;
+}
+
+.container .videos video:nth-child(1){
+    margin-top: 0;
+}
+
+.container .videos video:hover,
+.container .videos .active{
+    transform: scale(1.06);
+    border: 5px solid #337CCF ;
+}
+
+.container .main-video{
+    width: 80%;
+    padding: 10px;
+}
+
+.container .main-video video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 5px solid #337CCF;
+}
+
+
+
+/* Mini reset, no margins, paddings or bullets */
+.menu,
+.submenu {
+  padding: 0;
+  list-style: none;
+}
+
+/* Main level */
+.menu {   
+  margin: 0px -9px;
+  width: 900px;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content; 
+ z-index: 1;
+}
+
+.menu > li {
+  background: #071952;
+  float: right;
+  position: relative;
+  transform: skewX(25deg);
+}
+
+.menu a {
+  display: block;
+  color:  #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Cursive;
+}  
+
+.menu li:hover {
+  background: #337CCF;
+}  
+
+.menu > li > a {
+  transform: skewX(-25deg);
+  padding: 1em 2em;
+}
+
+.submenu {
+  position: absolute;
+  width: 232px;
+  left: 50%; 
+  margin-left: -100px;
+  transform: skewX(-25deg);
+  transform-origin: left top;
+}
+
+.submenu li {
+  background-color: #071952;
+  position: relative;
+  overflow: hidden;  
+}      
+
+.submenu > li > a {
+  padding: 1em 2em;
+position: relative;
+  top: -125%;
+    left: -100px;   
+}
+
+.submenu > li::after {
+  content: '';
+  position: absolute;
+  top: -125%;
+    left: -50px;
+  height: 100%;
+  width: 100%;   
+  box-shadow: 0 0 50px red;   
+}  
+
+/* Odd stuff */
+.submenu > li:nth-child(odd){
+  transform: skewX(-25deg) translateX(0);
+}
+
+.submenu > li:nth-child(odd) > a {
+  transform: skewX(25deg);
+}
+
+.submenu > li:nth-child(odd)::after {
+  right: -50%;
+  transform: skewX(-25deg) rotate(3deg);
+}    
+
+/* Even stuff */
+.submenu > li:nth-child(even){
+  transform: skewX(25deg) translateX(0);
+}
+
+.submenu > li:nth-child(even) > a {
+  transform: skewX(-25deg);
+}
+
+.submenu > li:nth-child(even)::after {
+  left: -500%;
+  transform: skewX(25deg) rotate(3deg);
+}
+
+/* Show dropdown */
+.submenu,
+.submenu li {
+  opacity: 0;
+  visibility: hidden;   
+}
+
+.submenu li {
+  transition: .2s ease transform;
+}
+
+.menu > li:hover .submenu,
+.menu > li:hover .submenu li {
+  opacity: 1;
+  visibility: visible;
+}  
+
+.menu > li:hover .submenu li:nth-child(even){
+  transform: skewX(25deg) translateX(15px);

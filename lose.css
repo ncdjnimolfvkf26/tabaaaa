@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Yantramanav:wght@100;300;400;500;700;900&display=swap');
+ 
+*{
+   background: #EEEEEE;
+
+}
+
+
+font {
+  background-color: #EEEEEE;
+}
+
+
+
+
+h2:hover {
+  background-color:  #071952;
+  border: 2px solid #EEEEEE;
+  border-top-right-radius: 50px ;
+  text-decoration-line:underline;
+  text-decoration-color: #071952; 
+  transition: 0.2s;
+  text-decoration-thickness: 5px;
+
+}
+
+
+
+h2 {
+  color: black;
+font-size: 40px;
+font-family: Impact, fantasy;
+ 
+}
+
+h3 {
+
+text-align: left;
+  color: white;
+font-size: 30px;
+font-family:  Snell Roundhand ;
+word-spacing: -3px;
+text-shadow: 3px 3px 5px  blue;
+font-weight: 300;
+ z-index: -1;
+
+}
+
+h3 font {
+  background-color: #B4B4B3;
+  border-top-right-radius: 50px ;
+
+ z-index: 1;
+
+}
+
+p {
+text-shadow: 0px 0px 5px #B4B4B3;
+text-indent: 50px;
+color: darkblue;
+font-size: 15px;
+font-family: Georgia, serif;
+font-weight: 220;
+text-align: center;
+width: 1420px;
+
+}
+
+ 
